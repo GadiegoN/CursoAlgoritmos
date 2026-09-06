@@ -40,17 +40,6 @@ public class PlayerMovement : MonoBehaviour
 
         direction = direction.normalized;
 
-        // Debug.Log(direction.magnitude);
-
         transform.position += direction * speed * Time.deltaTime;
-
-        // Vector3 toTarget = target.position - transform.position;
-
-        float distance = Vector3.Distance(
-            transform.position,
-            target.position
-        );
-
-        // Debug.Log(distance);
     }
 }
