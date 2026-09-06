@@ -21,18 +21,11 @@ public class EnemyFollow : MonoBehaviour
 
         if (distance < 5 && distance > .5)
         {
-            Debug.Log("Player detectado em: " + distance);
-
             Vector3 direction = target.position - transform.position;
             direction = direction.normalized;
 
             transform.position += direction * speed * Time.deltaTime;
-
         }
 
-        else
-        {
-            Debug.Log("Procurando player em: " + distance);
-        }
     }
 }
